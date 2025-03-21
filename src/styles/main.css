@@ -1,0 +1,526 @@
+/* Minimale CSS für Podkiss - "So wenig wie möglich, so viel wie nötig" */
+
+:root {
+  /* Reduzierte Farbpalette */
+  --color-primary: hsl(262, 83%, 58%);
+  --color-primary-light: #8b5cf6;
+  --color-text: #333;
+  --color-text-secondary: #666;
+  --color-background: #fff;
+  --color-surface: #f9fafb;
+  --color-border: #ddd;
+  --color-error: #dc2626;
+  --color-success: #16a34a;
+  --color-warning: #f59e0b;
+
+  --hsl-h: 262;
+  --hsl-s: 83%;
+  --hsl-l: 58%;
+  
+  /* Vereinfachte Schatten */
+  --shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  --shadow-large: 0 4px 12px rgba(0, 0, 0, 0.15);
+  
+  /* Vereinfachte Abstände */
+  --space-xs: 0.25rem;
+  --space-small: 0.5rem;
+  --space-medium: 1rem;
+  --space-large: 2rem;
+  
+  /* Vereinfachtes Layout */
+  --player-height: 6rem;
+  --radius: 0.25rem;
+
+  /* Übergangseffekte */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+}
+
+
+/* Layout */
+.app-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 var(--space-medium);
+}
+
+
+.button.danger {
+  background: var(--color-error);
+}
+
+.card {
+  background: var(--color-surface);
+  padding: var(--space-medium);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+/* Header */
+.app-header {
+  background: white;
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-medium) 0;
+  margin-bottom: var(--space-large);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Podcast Detail */
+.podcast-detail {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.podcast-header {
+  padding: var(--space-medium);
+  background: white;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-medium);
+}
+
+.podcast-info {
+  display: flex;
+  gap: var(--space-medium);
+  flex: 1;
+  min-width: 0;
+}
+
+.podcast-cover {
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.podcast-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.podcast-meta h1 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-small);
+}
+
+.podcast-author {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: var(--space-small);
+}
+
+.podcast-description {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.podcast-actions {
+  display: flex;
+  gap: var(--space-small);
+  flex-shrink: 0;
+}
+
+/* Episodes Container */
+.episodes-container {
+  padding: var(--space-medium);
+}
+
+.episodes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-medium);
+  flex-wrap: wrap;
+  gap: var(--space-small);
+}
+
+.episodes-header h2 {
+  margin: 0;
+}
+
+.episodes-filter {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+}
+
+.episodes-filter input {
+  width: 100%;
+  padding-right: 2.5rem;
+}
+
+.filter-results {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+/* Episode Liste */
+.episodes-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-small);
+}
+
+.episode-item {
+  padding: var(--space-medium);
+  border-radius: var(--radius);
+  background: white;
+  border: 1px solid var(--color-border);
+  transition: box-shadow var(--transition-normal);
+}
+
+.episode-item:hover {
+  box-shadow: var(--shadow);
+}
+
+.episode-item.playing {
+  border-color: var(--color-primary);
+  background-color: rgba(124, 58, 237, 0.05);
+}
+
+.episode-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-medium);
+}
+
+.episode-title-area {
+  flex: 1;
+  min-width: 0;
+}
+
+.episode-title-area h3 {
+  margin: 0 0 var(--space-xs);
+  font-size: 1.1rem;
+}
+
+.episode-meta {
+  display: flex;
+  gap: var(--space-medium);
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.episode-controls {
+  display: flex;
+  gap: var(--space-xs);
+  flex-shrink: 0;
+}
+
+.episode-description {
+  margin-top: var(--space-small);
+  padding-top: var(--space-small);
+  border-top: 1px solid var(--color-border);
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+/* Player */
+.fixed-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-medium);
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-small);
+}
+
+.player-error {
+  background-color: rgba(220, 38, 38, 0.1);
+  color: var(--color-error);
+  padding: var(--space-xs) var(--space-small);
+  border-radius: var(--radius);
+  text-align: center;
+  font-size: 0.875rem;
+  margin-bottom: var(--space-small);
+}
+
+.player-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-medium);
+}
+
+.player-cover {
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius);
+  object-fit: cover;
+}
+
+.player-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.player-meta h3 {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+}
+
+.player-meta p {
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.player-progress {
+  width: 100%;
+}
+
+.progress-slider {
+  width: 100%;
+  height: 4px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--color-border);
+  border-radius: 2px;
+  outline: none;
+  margin-bottom: var(--space-xs);
+}
+
+.progress-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.progress-slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.time-display {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  margin-bottom: -1.2rem;
+}
+
+.player-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-medium);
+  position: relative;
+}
+
+.control-button {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-fast);
+}
+
+.control-button:hover {
+  background-color: var(--color-surface);
+}
+
+.control-button.primary {
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 1.1rem;
+}
+
+.control-button.primary:hover {
+  background-color: var(--color-primary-light);
+}
+
+.control-button.secondary {
+  font-size: 0.8rem;
+}
+
+.playback-rate-popup {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  background: white;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  padding: var(--space-small);
+  margin-bottom: var(--space-small);
+  z-index: 10;
+}
+
+.playback-rate-options {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.playback-rate-options button {
+  border: none;
+  background: none;
+  padding: var(--space-xs) var(--space-small);
+  text-align: center;
+  cursor: pointer;
+  border-radius: var(--radius);
+  transition: background-color var(--transition-fast);
+}
+
+.playback-rate-options button:hover {
+  background-color: var(--color-surface);
+}
+
+.playback-rate-options button.active {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* Zustände */
+.empty-state {
+  text-align: center;
+  color: var(--color-text-secondary);
+  padding: var(--space-large);
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  border: 1px dashed var(--color-border);
+}
+
+.loading-state {
+  text-align: center;
+  color: var(--color-text-secondary);
+  padding: var(--space-large);
+}
+
+/* Einfache Meldungen */
+.message {
+  position: fixed;
+  bottom: calc(var(--player-height) + var(--space-medium));
+  right: var(--space-medium);
+  padding: var(--space-small) var(--space-medium);
+  background: var(--color-primary);
+  color: white;
+  border-radius: var(--radius);
+  z-index: 1000;
+  box-shadow: var(--shadow);
+  animation: slideIn 0.3s ease, fadeOut 0.3s ease 2.7s forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Vereinfachter Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #eee;
+    --color-text-secondary: #aaa;
+    --color-background: #222;
+    --color-surface: #333;
+    --color-border: #444;
+    --color-primary: #8b5cf6;
+    --color-primary-light: #9d65ff;
+  }
+  
+  .card:hover {
+    background-color: #3a3a3a;
+  }
+  
+  .episode-item.playing {
+    background-color: rgba(139, 92, 246, 0.15);
+  }
+  
+  .fixed-player, .podcast-header {
+    background: #2a2a2a;
+  }
+  
+  .playback-rate-popup {
+    background: #2a2a2a;
+  }
+  
+  .player-error {
+    background-color: rgba(220, 38, 38, 0.2);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .podcast-header {
+    flex-direction: column;
+  }
+  
+  .podcast-actions {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: var(--space-small);
+  }
+  
+  .episodes-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .episodes-filter {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --player-height: 8rem;
+  }
+  
+  .player-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .player-meta {
+    width: 100%;
+  }
+}

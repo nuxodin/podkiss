@@ -1,0 +1,39 @@
+{
+  "version": "4",
+  "redirects": {
+    "https://esm.sh/preact?target=denonext": "https://esm.sh/preact@10.26.4?target=denonext",
+    "https://unpkg.com/@webreflection/mapset@^1.0.1?module": "https://unpkg.com/@webreflection/mapset@1.0.1/cjs/index.js",
+    "https://unpkg.com/@webreflection/uparser@^0.2.4?module": "https://unpkg.com/@webreflection/uparser@0.2.4/es.js",
+    "https://unpkg.com/@webreflection/uwire@1.2.1/min.js": "https://unpkg.com/@webreflection/uwire@1.2.1/cjs/index.js",
+    "https://unpkg.com/@webreflection/uwire@^1.2.1?module": "https://unpkg.com/@webreflection/uwire@1.2.1/min.js",
+    "https://unpkg.com/udomdiff@^1.1.0?module": "https://unpkg.com/udomdiff@1.1.2/min.js",
+    "https://unpkg.com/uhandlers@0.7.0/min.js": "https://unpkg.com/uhandlers@0.7.0/cjs/index.js",
+    "https://unpkg.com/uhandlers@^0.7.0?module": "https://unpkg.com/uhandlers@0.7.0/min.js"
+  },
+  "remote": {
+    "https://cdn.jsdelivr.net/gh/nuxodin/lazyfill/htmlfills.min.js": "666cee86d7b3d122024ceb5c6bf023440ff686b29c55b017134ebb117c539404",
+    "https://cdn.jsdelivr.net/gh/nuxodin/lazyfill/mod.min.js": "a1c4c69b9e2bfdadecdc122e09dc6a25b683c3778a7e2a17f562681f910f9890",
+    "https://cdn.jsdelivr.net/gh/u1ui/SelectorObserver.js@4.0.0/SelectorObserver.min.js": "77ded835b5061fbc58ddbaf03ca36706531f21d0e7fdb17ac3112d78bbba0560",
+    "https://cdn.jsdelivr.net/gh/u2ui/u2@x.x.x/u2/auto.min.js": "f5371cd869fef9750af46cbe1b02524eda2303b1e32d43803ef1c8b490cad5c1",
+    "https://cdn.jsdelivr.net/gh/u2ui/u2@x.x.x/u2/auto.ui.js": "1e01f65640d3125449fdd7e3250a04deec015f978344f2b07e67f7a42a94837d",
+    "https://cdn.jsdelivr.net/gh/u2ui/u2@x.x.x/u2/u2.js": "fe1bf79faf3a2cd9643e2cf10e543f360608e73c7cbe6c093330852a7f63ca2a",
+    "https://cdn.jsdelivr.net/gh/u2ui/u2@x.x.x/u2/utils.js": "ebae660d0a6b0e7d4cb40dd761f324c4275e9ebcdbf60cb71fdbed1fc5998dc8",
+    "https://deno.land/std@0.212.0/async/delay.ts": "eab3187eee39ccc8cc76d411fb21fb1801250ddb1090e486d5aec2ace5403391",
+    "https://deno.land/std@0.212.0/http/server.ts": "ddee66e9a2ee98df8b31a47fd4ad678e75a8a11f543157641fd9ea0760c20f39",
+    "https://esm.sh/htm@3.1.1/denonext/htm.mjs": "6c0d0967b9cc95f4f7db768425d3992757d814f95b0a7fc963a904b25bd7b873",
+    "https://esm.sh/htm@3.1.1/denonext/preact/index.mjs": "a425cd1b715d18e3a0c026c9543b36898937408a1772da3153058a9e201ae150",
+    "https://esm.sh/htm@3.1.1/preact/index.mjs": "9e29b4503caccf8691a5d5fcd6a6259bcf539a77789d316bc34c2d22ebba7ff4",
+    "https://esm.sh/preact@10.26.4/denonext/preact.mjs": "c8d401d841029111be42eb71302f20ce42997a73722d22442771648f985b5d11",
+    "https://esm.sh/preact@10.26.4?target=denonext": "4f15cf11ed0552fc5035de57c6ae079babb878873cc703790099c3105e443881",
+    "https://unpkg.com/@webreflection/mapset@1.0.1/cjs/index.js": "9e539bcd739346fa6d081e028ddf089cf7669cd62d181531117450e0631b2384",
+    "https://unpkg.com/@webreflection/uparser@0.2.4/es.js": "d51fc0f14e92d0df19a2185f1d7f1802a4fac07e6ab510c2237ef215efbaa66f",
+    "https://unpkg.com/@webreflection/uwire@1.2.1/cjs/index.js": "b3e0824ed409083a83d3e6d4832680aeaa6eafe45aac327d91f85eace795bb60",
+    "https://unpkg.com/preact@10.15.1/dist/preact.module.js": "ac9c42d81a48fdfc7f5ea8a54404b32ac6a8a4d545f3128fb24037d18676d45d",
+    "https://unpkg.com/udomdiff@1.1.2/min.js": "4f38f3dbce8b33c5e2628e1418203564789be95472f54178fd1d870f2525cf9a",
+    "https://unpkg.com/uhandlers@0.7.0/cjs/index.js": "302a19f99ed3673c1340ba07150372e8e6aeb5cd7831bd5a216a92e68c253656",
+    "https://unpkg.com/uhtml@3.1.0/esm/handlers.js?module": "f750c1dd7194beb0db1c79499c3e3ee8af149c89132e9bb0a7dcbf07434e3d7c",
+    "https://unpkg.com/uhtml@3.1.0/esm/index.js?module": "6a610817a731f15b27e0da871217b68740050d82bcb897caa5f43520c3012670",
+    "https://unpkg.com/uhtml@3.1.0/esm/rabbit.js?module": "128e2e926fac28562fc7f8ba7ad85b3b5292319201db4f0fe67edf056c0eeb50",
+    "https://unpkg.com/uhtml@3.1.0/esm/utils.js?module": "206d2bd8e23cd70bdf29a5faddcf8cc294550261b827b2fe056af9ad5b07cbad"
+  }
+}
